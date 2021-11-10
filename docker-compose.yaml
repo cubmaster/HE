@@ -1,0 +1,29 @@
+version: "3.7"
+
+volumes:
+  localvolume:
+    name: "localvolume"
+    driver: "local"
+
+networks:
+  dev_network:
+    driver: bridge
+
+services:
+
+  mongodb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_DATABASE: "db"
+      #MONGO_INITDB_ROOT_USERNAME: "root"
+      #MONGO_INITDB_ROOT_PASSWORD: "myBigDevPassword!"
+
+    ports:
+      - 27017:27017
+    volumes:
+      - localvolume:/data/db
+    networks:
+      - dev_network
+
+
+
