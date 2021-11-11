@@ -6,7 +6,7 @@ import cors from "cors";
 import {config} from "./config/config";
 import {IndexRouter} from './routes/index'
 import {APIRouter} from './routes/api';
-
+import {HE} from './routes/he'
 import {
     Mongoose
 }  from './config/mongoose';
@@ -38,7 +38,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
+app.use('/he', new HE().router);
 app.use('/api', new APIRouter().router);
 app.use('/', new IndexRouter().router);
 

@@ -23,8 +23,7 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
 @NgModule({
   declarations: [
     AppComponent,
-
-    HomeComponent,
+    HomeComponent
 
   ],
   imports: [

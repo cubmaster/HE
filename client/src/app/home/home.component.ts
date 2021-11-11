@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Notebook} from "../models/notebook";
 import {ApiService} from "../services/api.service";
 import {IBase} from "../models/Base";
-
+import {CryptoService} from "../services/crypto.service";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +10,6 @@ import {IBase} from "../models/Base";
 export class HomeComponent implements OnInit {
 
 
-  public noteBooks:Notebook[];
   constructor(private api: ApiService) { }
 
 

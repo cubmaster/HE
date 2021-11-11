@@ -36,7 +36,7 @@
               "node_modules/bootstrap/dist/js/bootstrap.js",
               "src/assets/scripts/jquery.js",
               "src/assets/scripts/jquery-ui.js",
-              "src/assets/scripts/draw2d.js"
+              "node_modules/palisade-crypto/index.ts"
             ]
           },
           "configurations": {
